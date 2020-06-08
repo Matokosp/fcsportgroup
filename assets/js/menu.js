@@ -107,3 +107,35 @@ $('a[href^="#"]').on('click', function(event) {
 
 	myFunction(x) // Call listener function at run time
 	x.addListener(myFunction) // Attach listener function on state changes
+
+
+
+  // COUNTER
+
+  var expertos = $('#expertos').offset();
+
+  // const sm = window.matchMedia( "(max-width: 992px)" );
+  // const md = window.matchMedia( "(min-width: 1000px)" );
+  // if (mq.matches) {
+  	$(window).scroll(function(){
+  		if ($(window).scrollTop() >= expertos.top - 150) {
+  			$('.count').each(function() {
+  			var $this = $(this),
+  						countTo = $this.attr('data-count');
+  				$({ countNum: $this.text()}).animate({
+  					countNum: countTo
+  				},
+  				{
+  					duration: 1500,
+  					easing:'swing',
+  					step: function() {
+  						$this.text(Math.floor(this.countNum));
+  					},
+  					complete: function() {
+  						$this.text(this.countNum);
+  						//alert('finished');
+  					}
+  				});
+  		});
+  	}
+  })

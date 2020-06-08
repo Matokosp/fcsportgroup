@@ -109,14 +109,14 @@
 
   .rrss_section {
     position: absolute;
-    top: 30px;
+    top: 25px;
     right: 5vw;
     width: 10%;
     padding: 0px;
   }
 
   .rrss_menu {
-    width: 30px;
+    width: 35px;
   }
 
   .rrss_menu img {
@@ -176,6 +176,143 @@
     padding: 1px 15px;
   }
 
+  /* EXPERTOS SECTION */
 
+  .expertos_titles {
+    font-size: 3.2rem;
+  }
+
+  .expertos_numbers {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 150px 0;
+    padding: 0 8vw;
+  }
+
+  .expertos_numbers_item {
+    text-align: center;
+    width: 20%;
+    margin: 0px;
+    align-self: flex-start;
+  }
+
+  .expertos_numbers_division {
+    width: 7px;
+    margin: 0 15px;
+    height: 80px;
+    transform: skew(-15deg, 15deg);
+  }
+
+  .expertos_numbers_item h3 {
+    font-size: 3rem;
+  }
+
+  .expertos_numbers_item p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  /* PROYECTOS SECTION */
+
+  .proyectos_section {
+    color: #fff;
+    background-color: #414042;
+    padding: 30px 8vw;
+  }
+
+  .proyectos_title {
+    font-size: 3.2rem;
+  }
+
+  .card {
+    position: relative;
+    height: 100%;
+    margin: 10px 0;
+  }
+
+  .card-content {
+    width: 95%;
+    transition: 0.4s;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .card:hover .card-content {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .card_background {
+    width: 95%;
+  }
+
+  /* CONTACT SECTION */
+
+  .contact_section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .contact_info {
+    padding: 30px;
+    width: 45%;
+  }
+
+  /* CONTACT FORM */
+
+  .contact_info h2 {
+    font-size: 3.2rem;
+  }
+
+  .contact_form_div {
+    width: 55%;
+    padding-right: 10%;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+  }
+
+  /* FOOTER SECTION */
+
+  .footer {
+    padding: 10px 8vw;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer_text {
+    font-size: 0.7rem;
+  }
+
+  .footer_division {
+    width: 3px;
+    height: 30px;
+    margin: 0px;
+  }
+
+  .footer img {
+    width: 120px;
+    margin: 0px 20px;
+  }
+
+
+}
+
+@media screen and (min-width: 1440px) and (orientation: landscape) {
+
+  .rrss_section {
+    position: absolute;
+    top: 25px;
+    right: 5vw;
+    width: 10%;
+    padding: 0px;
+  }
+
+  .rrss_menu {
+    width: 40px;
+  }
 
 }
