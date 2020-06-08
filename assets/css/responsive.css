@@ -65,10 +65,10 @@
 
   .laptop_menu {
     position: fixed;
-    top: 10px;
+    top: 15px;
     left: 10px;
     z-index: 51;
-    width: 230px;
+    width: 200px;
   }
 
   .laptop_menu img {
@@ -93,7 +93,7 @@
 
   .menu-link {
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 400;
@@ -236,6 +236,7 @@
     transition: 0.4s;
     visibility: hidden;
     opacity: 0;
+    padding: 10%;
   }
 
   .card:hover .card-content {
@@ -247,6 +248,15 @@
     width: 95%;
   }
 
+  .card_title {
+    font-size: 1.4rem;
+    margin: 8px 0;
+  }
+
+  .card_subtitle p {
+    font-size: 0.9rem;
+  }
+
   /* CONTACT SECTION */
 
   .contact_section {
@@ -255,7 +265,10 @@
   }
 
   .contact_info {
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 150px 30px;
     width: 45%;
   }
 
@@ -267,7 +280,7 @@
 
   .contact_form_div {
     width: 55%;
-    padding-right: 10%;
+    padding: 150px 10% 150px 20px;
     -webkit-clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
   }
@@ -302,6 +315,34 @@
 }
 
 @media screen and (min-width: 1440px) and (orientation: landscape) {
+
+  /* MENU */
+
+  .menu-link {
+    font-size: 1rem;
+  }
+
+  /* MAIN */
+
+  .header_block {
+    /* padding: 10%; */
+  }
+
+  .header_left {
+    padding: 0 30% 0 5vw;
+  }
+
+  .header_right {
+    padding: 0 15vw 0 20%;
+  }
+
+  .header_block h2 {
+    font-size: 3.5rem;
+  }
+
+  .header_block p {
+    font-size: 1.5rem;
+  }
 
   .rrss_section {
     position: absolute;

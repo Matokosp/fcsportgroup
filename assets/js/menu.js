@@ -126,7 +126,7 @@ $('a[href^="#"]').on('click', function(event) {
   					countNum: countTo
   				},
   				{
-  					duration: 1500,
+  					duration: 1200,
   					easing:'swing',
   					step: function() {
   						$this.text(Math.floor(this.countNum));

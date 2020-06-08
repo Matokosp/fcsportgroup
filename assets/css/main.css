@@ -178,7 +178,9 @@ h1,h2,h3,h4 {
 .header_link {
   font-weight: 700;
   color: #414042;
-  display: table;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
   background-color: #C6D92C;
   border-radius: 50px;
   padding: 5px 15px;
@@ -271,7 +273,7 @@ h1,h2,h3,h4 {
 
 .card-content {
   position: absolute;
-  background: rgba(34,126,75,0.6);
+  background: rgba(34,126,75,0.7);
   top: 0;
   left: 0;
   /* padding: 10px; */
