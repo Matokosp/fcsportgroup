@@ -102,6 +102,7 @@ h1,h2,h3,h4 {
   transition: 0.4s;
 }
 
+
 /* menu show */
 
 .menu_show {
@@ -115,6 +116,10 @@ h1,h2,h3,h4 {
   letter-spacing: 2px;
   font-weight: 600;
   margin: 25px 0;
+}
+
+.menu_divison {
+  display: none;
 }
 
 .rrss_section {

@@ -55,6 +55,76 @@
 
 @media screen and (min-width: 1000px) and (orientation: landscape) {
 
+  .laptop {
+    display: block;
+  }
+
+  /* MENU */
+
+  /* hamburger menu icon */
+
+  .laptop_menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 51;
+    width: 230px;
+  }
+
+  .laptop_menu img {
+    width: 100%;
+  }
+
+  .hamburger_div {
+    display: none;
+  }
+
+  /* menu hidden */
+
+  .menu {
+    height: 90px;
+    flex-direction: row;
+    /* align-items: center; */
+    /* justify-content: center; */
+    transform: translateX(0vw);
+  }
+
+  /* menu show */
+
+  .menu-link {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin: 0px 25px;
+  }
+
+  .menu_divison {
+    display: block;
+    background-color: #fff;
+    height: 30px;
+    width: 2px;
+  }
+
+  .rrss_section {
+    position: absolute;
+    top: 30px;
+    right: 5vw;
+    width: 10%;
+    padding: 0px;
+  }
+
+  .rrss_menu {
+    width: 30px;
+  }
+
+  .rrss_menu img {
+    width: 100%;
+  }
+
+  /* MAIN */
+
   .home_header {
     height: 100vh;
     padding-top: 70px;
