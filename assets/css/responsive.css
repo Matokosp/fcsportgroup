@@ -133,11 +133,50 @@
     position: relative;
   }
 
+  .header_diagonal_uno {
+    height: 110vh;
+    width: 10vw;
+    background-color: #C6D92C;
+    opacity: 0.8;
+    transition: 0.4s ;
+    position: absolute;
+    top: -5vh;
+    left: 42vw;
+    transform: skewX(-20deg);
+    z-index: 40;
+  }
+
+  .header_diagonal_uno-fade {
+    top: -105vh;
+    left: 60vw;
+    opacity: 0;
+  }
+
+  .header_diagonal_dos {
+    height: 100vh;
+    width: 10vw;
+    background-color: #2861AD;
+    opacity: 0.8;
+    transition: 0.4s ;
+    position: absolute;
+    top: 0vh;
+    left: 45vw;
+    transform: skewX(-20deg);
+    z-index: 40;
+  }
+
+  .header_diagonal_dos-fade {
+    top: 100vh;
+    left: 20vw;
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .header_block {
     position: absolute;
     height: 100%;
     width: 60%;
-    background-position: left;
+    background-position: right;
     flex-direction: column;
     justify-content: center;
     padding: 0;
@@ -180,6 +219,10 @@
 
   /* EXPERTOS SECTION */
 
+  .expertos {
+    margin: 100px 0 10px 0;
+  }
+
   .expertos_titles {
     font-size: 3.2rem;
     line-height: 3.4rem;
@@ -189,7 +232,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
-    margin: 150px 0;
+    margin: 80px 0;
     padding: 0 8vw;
   }
 
@@ -214,6 +257,37 @@
   .expertos_numbers_item p {
     font-size: 0.9rem;
     margin: 5px 0;
+  }
+
+  .medida {
+    background-color: transparent;
+    padding: 0;
+    margin: 30px 0;
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+    position: relative;
+  }
+
+  .tape {
+    position: absolute;
+    background-color: #C6D92C;
+    opacity: 0.6;
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .medida .expertos_titles {
+    background-color: #C6D92C;
+    padding: 10px 5vw 10px 0;
+    width: 35%;
+    text-align: right;
+    display: inline-block;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
   }
 
   /* PROYECTOS SECTION */
@@ -305,8 +379,8 @@
   }
 
   .footer_division {
-    width: 3px;
-    height: 30px;
+    width: 2px;
+    height: 40px;
     margin: 0px;
   }
 
@@ -359,5 +433,26 @@
   .rrss_menu {
     width: 40px;
   }
+
+  /* EXPERTOS */
+
+  .expertos_titles {
+    font-size: 3.8rem;
+    line-height: 4rem;
+  }
+
+  .expertos_numbers {
+    /* margin: 250px 0; */
+  }
+
+  .expertos_numbers_item h3 {
+    font-size: 3.8rem;
+  }
+
+
+  .proyectos_title {
+      font-size: 3.8rem;
+      line-height: 4rem;
+    }
 
 }
