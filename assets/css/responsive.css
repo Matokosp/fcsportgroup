@@ -137,6 +137,7 @@
     position: absolute;
     height: 100%;
     width: 60%;
+    background-position: left;
     flex-direction: column;
     justify-content: center;
     padding: 0;
@@ -161,6 +162,7 @@
 
   .header_block h2 {
     font-size: 2.5rem;
+    line-height: 3.5rem;
   }
 
   .header_block p {
@@ -180,6 +182,7 @@
 
   .expertos_titles {
     font-size: 3.2rem;
+    line-height: 3.4rem;
   }
 
   .expertos_numbers {
@@ -223,6 +226,7 @@
 
   .proyectos_title {
     font-size: 3.2rem;
+    line-height: 3.4rem;
   }
 
   .card {

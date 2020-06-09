@@ -8,6 +8,9 @@
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <!-- SLICK JS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
     <!-- STYLE -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -20,10 +23,6 @@
     <link href="assets/ico/icon-hires.png" rel="icon" sizes="192x192" />
     <link href="assets/ico/icon-normal.png" rel="icon" sizes="128x128" />
     <link href="assets/ico/icon.svg" rel="mask-icon" sizes="any" color="#718696">
-    <!-- SLICK JS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
-
     <style media="screen">
       .header_left {
         background-image: url('assets/images/header_left.jpg');
@@ -288,7 +287,8 @@
       var slickopts = {
         slidesToShow: 4,
         slidesToScroll: 4,
-        rows: 2, // Removes the linear order. Would expect card 5 to be on next row, not stacked in groups.
+        rows: 2,
+        arrows: true,
         responsive: [
           { breakpoint: 478,
             settings: {
