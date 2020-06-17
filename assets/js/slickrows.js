@@ -87,6 +87,20 @@ jQuery(document).ready(function($) {
                     slider.find( settings.slideSelector ).remove();
                     slider.append( newSlides );
                     slider.slick( settings.slick );
+                    $('.modal_close').on('click', function(){
+                      $('.modal-box').removeClass('modal-show');
+                    })
+
+                    var modalId = $('.modal-box').attr('id');
+                    // var projectId = ;
+
+                    $('.card_link').on('click', function(){
+
+                      var projectIdConnect = $(this).attr('data-target');
+
+                      $('#'+projectIdConnect).addClass('modal-show');
+
+                    })
 
                     return;
                 }
@@ -110,6 +124,25 @@ jQuery(document).ready(function($) {
                 slider.find( settings.slideSelector ).remove();
                 slider.append( newSlides );
                 slider.slick( settings.slick );
+
+
+                $('.modal_close').on('click', function(){
+                  $('.modal-box').removeClass('modal-show');
+                })
+
+                var modalId = $('.modal-box').attr('id');
+                // var projectId = ;
+
+                $('.card_link').on('click', function(){
+
+                  var projectIdConnect = $(this).attr('data-target');
+
+                  $('#'+projectIdConnect).addClass('modal-show');
+
+                })
+
+
+
             });
         });
     };
