@@ -53,7 +53,6 @@ $('a[href^="#"]').on('click', function(event) {
 			// $('.menuicon').removeClass('menuicon-black');
 			// e.stopPropagation();
 		}
-		console.log(e.target)
 	})
 
 
@@ -61,7 +60,118 @@ $('a[href^="#"]').on('click', function(event) {
 
 	var sectionOne = $('#sectionOne').offset();
 	var sectionTwo = $('#sectionTwo').offset();
+  var sectionThree = $('#sectionThree').offset();
+  var sectionFour = $('#sectionFour').offset();
 	var position = $(window).scrollTop();
+
+
+
+
+  $(document).ready(function() {
+
+      // MODAL BOX SHOW AND HIDE
+
+    $('.modal_close').on('click', function(){
+      $('.modal-box').removeClass('modal-show');
+    })
+
+    var modalId = $('.modal-box').attr('id');
+    // var projectId = ;
+
+    $('.card_link').on('click', function(){
+
+      var projectIdConnect = $(this).attr('data-target');
+
+      $('#'+projectIdConnect).addClass('modal-show');
+
+    })
+
+    var proyectCategory = $('.proyect_categories').children('li');
+    var proyectTodos = $('.proyect_categories').children('li:nth-child(1)');
+    var proyectActDep = $('.proyect_categories').children('li:nth-child(2)');
+    var proyectInfDep = $('.proyect_categories').children('li:nth-child(3)');
+    var filtered = false;
+
+    proyectCategory.on('click', function(){
+      proyectCategory.css('color', '#fff');
+      $(this).css('color', '#C6D92C');
+    });
+
+
+
+    // proyectTodos.on('click', function() {
+    //   $('.carousel').slick('slickUnfilter');
+    //   filtered = false;
+    // });
+    //
+    // proyectActDep.on('click', function() {
+    //   $('.carousel').slick('slickUnfilter');
+    //   $('.carousel').slick('slickFilter', $('.act-dep').parent().parent());
+    //   filtered = true;
+    // });
+    //
+    // proyectInfDep.on('click', function() {
+    //   $('.carousel').slick('slickUnfilter');
+    //   $('.carousel').slick('slickFilter', $('.inf-dep').parent().parent());
+    //   filtered = true;
+    // });
+
+
+
+    // $(document).ready(function (){
+    //     var $slider = $( '.carousel' );
+    //     var $slider_clone = $slider.clone( true, true ); // add true, true to clone events too!
+    //     // Create a new clone for the slider items
+    //     var $new_slider = $slider_clone.clone( true, true );
+    //
+    //     init_slider();
+    //
+    //     $('.carousel').css("display","block");
+    //
+    //     // When someone clicks on a filter
+    //     proyectCategory.on( 'click', function(){
+    //         var filter_name = $(this).data('value');
+    //
+    //         // Clear current slider
+    //         $slider.slick( 'unslick' ); // Remove slick
+    //         $slider.empty(); // Remove elements
+    //
+    //         // Show only filtered items
+    //         if( filter_name == "All" ) {
+    //             $slider.append( $new_slider.find( '.card' ) );
+    //         } else {
+    //             $slider.append( $new_slider.find( '.card' + filter_name ) );
+    //         }
+    //
+    //         // Slick slider init
+    //         init_slider();
+    //
+    //     });
+    //
+    // });
+    //
+    // function init_slider() {
+    //   $('.carousel').slick({
+    //     lazyLoad: 'ondemand',
+    //     arrows: true,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 4,
+    //     rows: 1,
+    //     responsive: [
+    //       { breakpoint: 478,
+    //         settings: {
+    //           slidesPerRow: 1,
+    //           rows: 1,
+    //           slidesToShow: 2,
+    //           slidesToScroll: 2,
+    //         }
+    //       }]
+    //     });
+    // }
+
+
+
+  });
 
 
 
@@ -97,15 +207,47 @@ $('a[href^="#"]').on('click', function(event) {
             $('.header_description').addClass('header-from-right');
           })
 
+          // MENU ACTIVE
 
+          $(window).on('scroll', function(){
+
+          if($(window).scrollTop() >= sectionOne.top - 100) {
+            $('#menu').children('a:nth-child(1)').addClass('menu-link-active');
+            $('#menu').children('a:nth-child(3)').removeClass('menu-link-active');
+          } else {
+            $('#menu').children('a:nth-child(1)').removeClass('menu-active');
+          }
+
+          if($(window).scrollTop() >= sectionTwo.top - 100) {
+            $('#menu').children('a:nth-child(1)').removeClass('menu-link-active');
+            $('#menu').children('a:nth-child(3)').addClass('menu-link-active');
+            $('#menu').children('a:nth-child(5)').removeClass('menu-link-active');
+          }
+
+          if($(window).scrollTop() >= sectionThree.top - 100) {
+            $('#menu').children('a:nth-child(3)').removeClass('menu-link-active');
+            $('#menu').children('a:nth-child(5)').addClass('menu-link-active');
+            $('#menu').children('a:nth-child(7)').removeClass('menu-link-active');
+          }
+
+          if($(window).scrollTop() >= sectionThree.top * 10/7) {
+            $('#menu').children('a:nth-child(5)').removeClass('menu-link-active');
+            $('#menu').children('a:nth-child(7)').addClass('menu-link-active');
+          }
+
+          })
+
+
+
+          // MEDIDA
           $(function(){
             var
-            Node = $('#container'),
+            Node = $('#tapeContainer'),
             BaseWidth = Node.width();
 
             $(window).resize(function() {
-                $('#container').css({
-                    top: ($(window).height() - $('#container').outerHeight()) / 2
+                $('#tapeContainer').css({
+                    top: ($(window).height() - $('#tapeContainer').outerHeight()) / 2
                 });
             });
 
@@ -168,13 +310,32 @@ $('a[href^="#"]').on('click', function(event) {
   	}
   })
 
-  // DIAGONAL FADE
 
-  // $(window).on('load', function(){
-  //   setTimeout(function(){
-  //
-  //     $('#diagonalUno').addClass('header_diagonal_uno-fade');
-  //     $('#diagonalDos').addClass('header_diagonal_dos-fade');
-  //
-  //   }, 1000);
-  // })
+  // PROJECT SLIDESHOW
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }

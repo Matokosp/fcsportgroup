@@ -253,6 +253,10 @@ h1,h2,h3,h4 {
   font-size: 2.5rem;
 }
 
+.proyect_categories {
+  display: none;
+}
+
 .row {
   width: 100%;
   margin: 20px auto;
@@ -262,6 +266,45 @@ h1,h2,h3,h4 {
   position: relative;
   height: 100%;
   margin: 10px 0;
+}
+
+.modal_container {
+  display: none;
+}
+
+.modal-box {
+  position: fixed;
+  height: 75vh;
+  width: 90vw;
+  background-color: #404041;
+  border: solid 3px #C6D92C;
+  bottom: 30px;
+  left: 5vw;
+  z-index: 150;
+  padding: 5%;
+}
+
+.modal_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.modal_close img {
+  width: 100%;
+}
+
+.modal_text {
+  background-color: #fff;
+  padding: 10px 20px;
+  margin-top: 50px;
+}
+
+.modal_text p {
+  font-size: 0.9rem;
 }
 
 .card_background {
@@ -318,6 +361,7 @@ h1,h2,h3,h4 {
   width: 80px;
   padding: 2px 10px;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 /* CAROUSEL ARROWS */

@@ -33,6 +33,75 @@
     </style>
   </head>
   <body>
+    <div class="modal_container">
+      <div class="modal-box" id="testUno">
+        <div class="modal_close">
+          <img src="assets/images/modal-close.png" alt="">
+        </div>
+        <div class="modal_text">
+          <h3 class="modal_title">Escuelas de Invierno y Verano</h3>
+          <h5 class="modal_subtitle">Actividades deportivas y recreativas en vacaciones, Año 2015 a la fecha.</h5>
+          <p>Organización y planificación de ocho semanas al año en diferentes sedes, en las que realizamos actividades formativas de diferentes deportes, junto con juegos y manualidades para niños y niñas de 3 a 12 años. Cada año, más de 500 alumnos y 50 profesores dan vida a la actividad.</p>
+        </div>
+        <div class="project_gallery_cont">
+          <div class="container">
+            <div class="mySlides">
+              <!-- <div class="numbertext">1 / 6</div> -->
+              <img src="assets/images/test.jpg">
+            </div>
+
+            <div class="mySlides">
+              <!-- <div class="numbertext">2 / 6</div> -->
+              <img src="assets/images/test2.jpg">
+            </div>
+
+            <div class="mySlides">
+              <!-- <div class="numbertext">3 / 6</div> -->
+              <img src="assets/images/test.jpg">
+            </div>
+
+            <div class="mySlides">
+              <!-- <div class="numbertext">4 / 6</div> -->
+              <img src="assets/images/test2.jpg">
+            </div>
+
+            <div class="mySlides">
+              <!-- <div class="numbertext">5 / 6</div> -->
+              <img src="assets/images/test.jpg">
+            </div>
+
+            <div class="mySlides">
+              <!-- <div class="numbertext">6 / 6</div> -->
+              <img src="assets/images/test2.jpg">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="assets/images/test.jpg" style="width:100%" onclick="currentSlide(1)">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="assets/images/test2.jpg" style="width:100%" onclick="currentSlide(2)">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="assets/images/test.jpg" style="width:100%" onclick="currentSlide(3)">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="assets/images/test2.jpg" style="width:100%" onclick="currentSlide(4)">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="assets/images/test.jpg" style="width:100%" onclick="currentSlide(5)">
+              </div>
+              <div class="column">
+                  <img class="demo cursor" src="assets/images/test2.jpg" style="width:100%" onclick="currentSlide(6)">
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <a class="laptop_menu laptop" href="index.html">
       <img src="assets/images/fcsportgroup-logo.png" alt="">
     </a>
@@ -47,18 +116,18 @@
       </ul>
     </div>
     <nav class="menu" id="menu">
-      <a class="menu-link" href="index.html">nuestras marcas</a>
+      <a class="menu-link" href="#sectionOne">nuestras marcas</a>
       <div class="menu_divison"></div>
-      <a class="menu-link" href="somos.html">quiénes somos</a>
+      <a class="menu-link" href="#sectionTwo">quiénes somos</a>
       <div class="menu_divison"></div>
-      <a class="menu-link" href="somos.html">proyectos</a>
+      <a class="menu-link" href="#sectionThree">proyectos</a>
       <div class="menu_divison"></div>
-      <a class="menu-link" href="somos.html">contacto</a>
+      <a class="menu-link" href="#sectionFour">contacto</a>
       <div class="rrss_section">
-        <a class="rrss_menu" href="https://www.linkedin.com/company/escuelas-deportivas-formando-campeones-ltda-/">
+        <a class="rrss_menu" target="_blank" href="https://www.linkedin.com/company/escuelas-deportivas-formando-campeones-ltda-/">
           <img src="assets/images/li-icon.png" alt="">
         </a>
-        <a class="rrss_menu" href="https://www.instagram.com/fcsportgroup/">
+        <a class="rrss_menu" target="_blank" href="https://www.instagram.com/fcsportgroup/">
           <img src="assets/images/ig-icon.png" alt="">
         </a>
         <!-- <a class="rrss_menu" href="https://www.youtube.com">
@@ -73,13 +142,13 @@
       <h2>Actividades <br> deportivas</h2>
       <div class="header_title_division"></div>
       <p>Somos gestores y desarrolladores de instancias deportivas innovadoras, inclusivas y de excelencia</p>
-      <a class="header_link" href="www.escuelafc.cl/">Ir al sitio</a>
+      <a class="header_link" href="http://www.escuelafc.cl">Ir al sitio</a>
     </div>
     <div class="header_block header_right">
       <h2>Infraestructura <br> deportiva</h2>
       <div class="header_title_division"></div>
       <p>Somos expertos en soluciones de alta calidad para centros deportivos</p>
-      <a class="header_link" href="www.escuelafc.cl/">Ir al sitio</a>
+      <a class="header_link" href="https://domosportsgrass.com/es">Ir al sitio</a>
     </div>
   </header>
   <main>
@@ -110,20 +179,25 @@
         </div>
         <div class="expertos_numbers_division"></div>
         <div class="expertos_numbers_item">
-          <h3 class="lime_text">+<span class="count" data-count='150.000'>0</span></h3>
+          <h3 class="lime_text">+<span class="count" data-count='150000'>0</span></h3>
           <p>m2 de infraestructura deportiva instalados</p>
         </div>
       </section>
       <div class="medida">
-        <div class="tape" id="container"></div>
+        <div class="tape" id="tapeContainer"></div>
         <h2 class="expertos_titles"><span class="white_text">...a tu</span> medida</h2>
       </div>
     </section>
-    <section class="proyectos_section">
+    <section class="proyectos_section" id="sectionThree">
       <h2 class="proyectos_title"><span class="lime_text">y proyectos</span><br> en diversos rubros </h2>
+      <ul class="proyect_categories">
+        <li data-filter-heading="all">Ver Todos</li>
+        <li data-filter-heading="act-dep">Actividades Deportivas</li>
+        <li data-filter-heading="inf-dep">Infraestructura Deportiva</li>
+      </ul>
       <div class="row carousel">
-        <div class="card">
-          <img class="card_background" src="assets/images/1.jpg" alt="">
+        <div class="card act-dep">
+          <img class="card_background" data-lazy="assets/images/1.jpg" alt="">
           <div class="card-content">
             <h3 class="card_title">Colegio los Alerces</h3>
             <div class="card_division"></div>
@@ -131,11 +205,11 @@
               <p>Cancha de atletismo</p>
               <p>Año 2019</p>
             </div>
-            <a class="card_link" href="this_proyect">ver más</a>
+            <a class="card_link" data-target="testUno">ver más</a>
           </div>
         </div>
-        <div class="card">
-          <img class="card_background" src="assets/images/1.jpg" alt="">
+        <div class="card act-dep">
+          <img class="card_background" data-lazy="assets/images/1.jpg" alt="">
           <div class="card-content">
             <h3 class="card_title">Colegio los Alerces</h3>
             <div class="card_division"></div>
@@ -143,11 +217,11 @@
               <p>Cancha de atletismo</p>
               <p>Año 2019</p>
             </div>
-            <a class="card_link" href="this_proyect">ver más</a>
+            <a class="card_link" data-target="testDos">ver más</a>
           </div>
         </div>
-        <div class="card">
-          <img class="card_background" src="assets/images/1.jpg" alt="">
+        <div class="card inf-dep">
+          <img class="card_background" data-lazy="assets/images/1.jpg" alt="">
           <div class="card-content">
             <h3 class="card_title">Colegio los Alerces</h3>
             <div class="card_division"></div>
@@ -155,11 +229,11 @@
               <p>Cancha de atletismo</p>
               <p>Año 2019</p>
             </div>
-            <a class="card_link" href="this_proyect">ver más</a>
+            <a class="card_link" data-target="testTres">ver más</a>
           </div>
         </div>
-        <div class="card">
-          <img class="card_background" src="assets/images/1.jpg" alt="">
+        <div class="card inf-dep">
+          <img class="card_background" data-lazy="assets/images/1.jpg" alt="">
           <div class="card-content">
             <h3 class="card_title">Colegio los Alerces</h3>
             <div class="card_division"></div>
@@ -167,11 +241,11 @@
               <p>Cancha de atletismo</p>
               <p>Año 2019</p>
             </div>
-            <a class="card_link" href="this_proyect">ver más</a>
+            <a class="card_link" data-target="testTres">ver más</a>
           </div>
         </div>
-        <div class="card">
-          <img class="card_background" src="assets/images/1.jpg" alt="">
+        <div class="card inf-dep">
+          <img class="card_background" data-lazy="assets/images/1.jpg" alt="">
           <div class="card-content">
             <h3 class="card_title">Colegio los Alerces</h3>
             <div class="card_division"></div>
@@ -179,11 +253,11 @@
               <p>Cancha de atletismo</p>
               <p>Año 2019</p>
             </div>
-            <a class="card_link" href="this_proyect">ver más</a>
+            <a class="card_link" data-target="testTres">ver más</a>
           </div>
         </div>
-        <div class="card">
-          <img class="card_background" src="assets/images/1.jpg" alt="">
+        <div class="card act-dep">
+          <img class="card_background" data-lazy="assets/images/1.jpg" alt="">
           <div class="card-content">
             <h3 class="card_title">Colegio los Alerces</h3>
             <div class="card_division"></div>
@@ -191,11 +265,11 @@
               <p>Cancha de atletismo</p>
               <p>Año 2019</p>
             </div>
-            <a class="card_link" href="this_proyect">ver más</a>
+            <a class="card_link" data-target="testTres">ver más</a>
           </div>
         </div>
-        <div class="card">
-          <img class="card_background" src="assets/images/1.jpg" alt="">
+        <div class="card act-dep">
+          <img class="card_background" data-lazy="assets/images/1.jpg" alt="">
           <div class="card-content">
             <h3 class="card_title">Colegio los Alerces</h3>
             <div class="card_division"></div>
@@ -203,11 +277,11 @@
               <p>Cancha de atletismo</p>
               <p>Año 2019</p>
             </div>
-            <a class="card_link" href="this_proyect">ver más</a>
+            <a class="card_link" data-target="testTres">ver más</a>
           </div>
         </div>
-        <div class="card">
-          <img class="card_background" src="assets/images/1.jpg" alt="">
+        <div class="card act-dep">
+          <img class="card_background" data-lazy="assets/images/1.jpg" alt="">
           <div class="card-content">
             <h3 class="card_title">Colegio los Alerces</h3>
             <div class="card_division"></div>
@@ -215,36 +289,12 @@
               <p>Cancha de atletismo</p>
               <p>Año 2019</p>
             </div>
-            <a class="card_link" href="this_proyect">ver más</a>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card_background" src="assets/images/1.jpg" alt="">
-          <div class="card-content">
-            <h3 class="card_title">Colegio los Alerces</h3>
-            <div class="card_division"></div>
-            <div class="card_subtitle">
-              <p>Cancha de atletismo</p>
-              <p>Año 2019</p>
-            </div>
-            <a class="card_link" href="this_proyect">ver más</a>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card_background" src="assets/images/1.jpg" alt="">
-          <div class="card-content">
-            <h3 class="card_title">Colegio los Alerces</h3>
-            <div class="card_division"></div>
-            <div class="card_subtitle">
-              <p>Cancha de atletismo</p>
-              <p>Año 2019</p>
-            </div>
-            <a class="card_link" href="this_proyect">ver más</a>
+            <a class="card_link" data-target="testTres">ver más</a>
           </div>
         </div>
       </div>
     </section>
-    <section class="contact_section">
+    <section class="contact_section" id="sectionFour">
       <div class="contact_info">
         <h2>Ejecutemos <span class="lime_text">tu proyecto</span></h2>
         <div class="contact_division"></div>
@@ -285,29 +335,29 @@
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous">
   </script>
-  <script type="text/javascript" src="assets/js/menu.js"></script>
   <script src="assets/js/slick.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
-      var slickopts = {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        rows: 2,
-        arrows: true,
-        responsive: [
-          { breakpoint: 478,
-            settings: {
-              slidesPerRow: 1,
-              rows: 3,
-              slidesToShow: 2,
-              slidesToScroll: 2,
-            }
-          }]
-    };
-
-    $('.carousel').slick(slickopts);
+      // var slickopts = {
+      //   lazyLoad: 'ondemand',
+      //   arrows: true,
+      //   slidesToShow: 4,
+      //   slidesToScroll: 4,
+      //   rows: 1,
+      //   responsive: [
+      //     { breakpoint: 478,
+      //       settings: {
+      //         slidesPerRow: 1,
+      //         rows: 1,
+      //         slidesToShow: 2,
+      //         slidesToScroll: 2,
+      //       }
+      //     }]
+    // };
+    //
+    // $('.carousel').slick(slickopts);
   </script>
-  <script type="text/javascript">
+  <script type="text/javascript" src="assets/js/menu.js"></script>
+  <script type="text/javascript" src="assets/js/slickrows.js"></script>
 
-  </script>
 </body>
 </html>

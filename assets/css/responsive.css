@@ -7,6 +7,116 @@
     margin: 10px 0;
   }
 
+/* ------------------------------------------------ */
+
+/* MODAL BOX */
+
+.modal_container {
+  display: block;
+}
+
+
+.modal_text {
+  margin-top: 20px;
+}
+
+/* IMAGE GALLERY */
+
+.container {
+  position: relative;
+  margin-top: 20px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row {
+  width: 80%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------- */
+
   /* CONTACT SECTION */
 
   .contact_section {
@@ -100,6 +210,11 @@
     margin: 0px 25px;
   }
 
+  .menu-link-active {
+    color: #C4D72C;
+    font-weight: 700;
+  }
+
   .menu_divison {
     display: block;
     background-color: #fff;
@@ -138,7 +253,7 @@
     width: 10vw;
     background-color: #C6D92C;
     opacity: 0.8;
-    transition: 0.4s ;
+    transition: 0.8s ;
     position: absolute;
     top: -5vh;
     left: 42vw;
@@ -157,7 +272,7 @@
     width: 10vw;
     background-color: #2861AD;
     opacity: 0.8;
-    transition: 0.4s ;
+    transition: 0.8s ;
     position: absolute;
     top: 0vh;
     left: 45vw;
@@ -166,8 +281,8 @@
   }
 
   .header_diagonal_dos-fade {
-    top: 100vh;
-    left: 20vw;
+    top: 40vh;
+    left: 37vw;
     opacity: 0;
     visibility: hidden;
   }
@@ -231,10 +346,10 @@
     top: 0px;
     width: 60%;
     height: 350px;
-    animation: x 3s linear infinite alternate;
+    animation: x 3.5s linear infinite alternate;
   }
    .y {
-  	 animation: y 2s linear infinite alternate;
+  	 animation: y 3s linear infinite alternate;
      background-color: #2861AC;
      width: 70px;
      height: 70px;
@@ -302,12 +417,13 @@
   .tape {
     position: absolute;
     background-color: #C6D92C;
-    opacity: 0.6;
+    /* opacity: 0.6; */
     width: 100%;
     top: 0;
     right: 0;
     height: 100%;
     z-index: -1;
+    clip-path: polygon(3% 0, 100% 0, 100% 100%, 0% 100%);
   }
 
   .medida .expertos_titles {
@@ -316,7 +432,7 @@
     width: 35%;
     text-align: right;
     display: inline-block;
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+
   }
 
   /* PROYECTOS SECTION */
@@ -324,12 +440,30 @@
   .proyectos_section {
     color: #fff;
     background-color: #414042;
-    padding: 30px 8vw;
+    padding: 50px 8vw;
+    position: relative;
+    height: auto;
   }
 
   .proyectos_title {
     font-size: 3.2rem;
     line-height: 3.4rem;
+  }
+
+  .proyect_categories {
+    display: block;
+  }
+
+  .proyect_categories li {
+    display: inline-block;
+    margin: auto 5px;
+    border: solid 2px #C6D92C;
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+
+  .proyect_categories li:nth-child(1) {
+    color: #C6D92C;
   }
 
   .card {
@@ -338,15 +472,157 @@
     margin: 10px 0;
   }
 
-  /* .modal-box {
+  .modal-box {
     position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-color: red;
-    top: 0;
-    left: 0;
+    height: 75vh;
+    width: 0vw;
+    background-color: #404041;
+    border: solid 3px #C6D92C;
+    bottom: 20px;
+    left: 10vw;
     z-index: 150;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  .modal-show {
+    visibility: visible;
+    opacity: 1;
+    width: 80vw;
+  }
+
+  .modal_text {
+    margin: 0;
+    width: 35%;
+    display: inline-block;
+  }
+
+  .modal_title {
+    font-size: 2.2rem;
+    line-height: 2.1rem;
+    margin: 10px 0;
+  }
+
+  .modal_subtitle {
+    font-size: 1rem;
+  }
+
+  .modal_text p {
+    font-size: 1rem;
+  }
+
+  .project_gallery_cont {
+    width: 60%;
+    display: inline-block;
+  }
+
+
+  /* IMAGE GALLERY */
+
+  .modal_container {
+    display: block;
+  }
+
+  .container {
+    position: relative;
+    margin-top: 0;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 3px;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: -7%;
+    /* border-radius: 3px 0 0 3px; */
+  }
+
+  .prev {
+    left: -7%;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  /* .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
   } */
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .row {
+    width: 100%;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
 
   .card-content {
     width: 95%;
@@ -354,6 +630,7 @@
     visibility: hidden;
     opacity: 0;
     padding: 10%;
+    border: solid 3px #C6D92C;
   }
 
   .card:hover .card-content {
@@ -377,8 +654,11 @@
   /* CONTACT SECTION */
 
   .contact_section {
+    position: relative;
     display: flex;
     flex-direction: row-reverse;
+    /* height: 100vh; */
+    height: auto;
   }
 
   .contact_info {
@@ -465,7 +745,7 @@
     position: absolute;
     top: 25px;
     right: 5vw;
-    width: 10%;
+    /* width: 10%; */
     padding: 0px;
   }
 
@@ -490,8 +770,24 @@
 
 
   .proyectos_title {
-      font-size: 3.8rem;
-      line-height: 4rem;
-    }
+    font-size: 3.8rem;
+    line-height: 4rem;
+  }
+
+  /* MODAL BOX */
+
+  .modal-box {
+    height: 85vh;
+  }
+
+  .modal_text {
+    margin: 0;
+    width: 30%;
+    display: inline-block;
+  }
+.project_gallery_cont {
+    width: 55%;
+    display: inline-block;
+  }
 
 }
